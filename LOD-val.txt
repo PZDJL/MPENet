@@ -1,0 +1,45 @@
+loading annotations into memory...
+Done (t=0.06s)
+creating index...
+index created!
+[11/21 21:06:03] ppdet.data.source.coco INFO: Load [446 samples valid, 0 samples invalid] in file dataset/coco/dark\annotations/val.json.
+[11/21 21:06:03] ppdet.utils.checkpoint INFO: Finish loading model weights: ./output/best_model/model.pdparams
+[11/21 21:06:05] ppdet.engine INFO: Eval iter: 0
+[11/21 21:06:18] ppdet.engine INFO: Eval iter: 100
+[11/21 21:06:22] ppdet.metrics.metrics INFO: The bbox result is saved to bbox.json.
+loading annotations into memory...
+Done (t=0.00s)
+creating index...
+index created!
+[11/21 21:06:22] ppdet.metrics.coco_utils INFO: Start evaluate...
+Loading and preparing results...
+DONE (t=0.99s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=4.00s).
+Accumulating evaluation results...
+DONE (t=1.12s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.568
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.793
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.618
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.023
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.231
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.644
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.291
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.634
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.731
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.298
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.468
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.793
+[11/21 21:06:29] ppdet.metrics.coco_utils INFO: Per-category of bbox AP: 
++-----------+-------+-------------+-------+----------+-------+
+| category  | AP    | category    | AP    | category | AP    |
++-----------+-------+-------------+-------+----------+-------+
+| Car       | 0.906 | Motorbike   | 0.819 | Bicycle  | 0.758 |
+| Chair     | 0.728 | Diningtable | 0.716 | Bottle   | 0.728 |
+| Tvmonitor | 0.783 | Bus         | 0.909 | None     | None  |
++-----------+-------+-------------+-------+----------+-------+
+[11/21 21:06:29] ppdet.metrics.coco_utils INFO: per-category PR curve has output to bbox_pr_curve folder.
+[11/21 21:06:29] ppdet.engine INFO: Total sample number: 446, average FPS: 36.655603101973263
